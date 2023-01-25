@@ -84,10 +84,11 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
-  const response = await fetch("https://codex-im0y.onrender.com/", {
+  const response = await fetch("http://localhost:8000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${"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"}`,
     },
     body: JSON.stringify({
       prompt: data.get("prompt"),
