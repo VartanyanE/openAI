@@ -8,7 +8,6 @@ dotenv.config();
 const configuration = new Configuration({
   organization: "org-iGQHT04CmrSyBNEkOvjzSbsj",
   apiKey: process.env.OPENAI_API_KEY,
-  authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
 });
 
 const openai = new OpenAIApi(configuration);
