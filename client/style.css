@@ -15,11 +15,18 @@ body {
   width: 100vw;
   height: 100vh;
   background: #343541;
+  position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* This will make the form take up the full width of the container */
 }
 
 #chat_container {
