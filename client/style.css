@@ -195,6 +195,6 @@ form img {
     }
   
 
-    #text {
-      position: relative;
+    .hidden {
+      display: none;
     }

@@ -3,6 +3,7 @@ import user from "./assets/user.svg";
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
+const wrp = document.querySelector(".wrp");
 
 let loadInterval;
 
@@ -69,7 +70,7 @@ const handleSubmit = async (e) => {
 
   // user's chatstripe
   chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
-
+  wrp.classList.add("hidden");
   // to clear the textarea input
   form.reset();
 
@@ -371,14 +372,4 @@ const PAPER = anime({
   rotate: getRndInteger(-400, -100),
   opacity: [0.3, 0.7, 0],
   easing: "easeInOutSine",
-});
-
-var text = document.querySelector("#text");
-// animate the text
-anime({
-  targets: text,
-  translateX: [0, 500],
-  duration: 5000,
-  loop: true,
-  direction: "alternate",
 });
