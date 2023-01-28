@@ -26,6 +26,8 @@ function typeText(element, text) {
   let interval = setInterval(() => {
     if (index < text.length) {
       element.innerHTML += text.charAt(index);
+      window.scrollTo(0, document.body.scrollHeight);
+
       index++;
     } else {
       clearInterval(interval);
