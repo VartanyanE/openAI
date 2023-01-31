@@ -67,7 +67,6 @@ const introMessage = async () => {
   chatContainer.innerHTML += chatStripe(true, "", uniqueId);
 
   // to focus scroll to the bottom
-  chatContainer.scrollTop = chatContainer.scrollHeight;
 
   // specific message div
   const messageDiv = document.getElementById(uniqueId);
