@@ -26,7 +26,7 @@ function typeText(element, text, speed) {
   let interval = setInterval(() => {
     if (index < text.length) {
       element.innerHTML += text.charAt(index);
-      window.scrollTo(0, document.body.scrollHeight);
+      // window.scrollTo(0, document.body.scrollHeight);
 
       index++;
     } else {
@@ -76,7 +76,7 @@ const introMessage = async () => {
   // loader(messageDiv);
 
   const parsedData =
-    "Hi there! I'm here to answer any questions you have. What can I help you with?..........Just enter an input in the form on the bottom of the screen. ";
+    "Hi there! I'm here to answer any questions you have. What can I help you with?......Just enter your query below! ";
 
   typeText(messageDiv, parsedData, 40);
 };
