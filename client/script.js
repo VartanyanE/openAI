@@ -20,7 +20,7 @@ function loader(element) {
   }, 300);
 }
 
-function typeText(element, text) {
+function typeText(element, text, speed) {
   let index = 0;
 
   let interval = setInterval(() => {
@@ -32,7 +32,7 @@ function typeText(element, text) {
     } else {
       clearInterval(interval);
     }
-  }, 40);
+  }, speed);
 }
 
 // generate unique ID for each message div of bot
@@ -76,9 +76,9 @@ const introMessage = async () => {
   // loader(messageDiv);
 
   const parsedData =
-    "Hi there! I'm here to answer any questions you have. What can I help you with?";
+    "Hi there! I'm here to answer any questions you have. What can I help you with?..........Just enter an input in the form on the bottom of the screen. ";
 
-  typeText(messageDiv, parsedData);
+  typeText(messageDiv, parsedData, 40);
 };
 
 introMessage();
@@ -124,7 +124,7 @@ const handleSubmit = async (e) => {
     const parsedData = data.bot.trim(); // trims any trailing spaces/'\n'
     console.log(parsedData);
 
-    typeText(messageDiv, parsedData);
+    typeText(messageDiv, parsedData, 20);
   } else {
     const err = await response.text();
 
